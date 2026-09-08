@@ -2,7 +2,7 @@
 
 A peer-to-peer distributed key-value store built with **Python**, **ZeroMQ**, and the **Anti-Entropy Push-Pull** epidemic protocol.
 
-The project demonstrates how a group of independent nodes can maintain a shared state and achieve eventual consistency without a central coordinator, while handling partial network failures, packet loss, crash faults (fail-stop), and concurrent updates via Last-Write-Wins (LWW) conflict resolution[cite: 2].
+The project demonstrates how a group of independent nodes can maintain a shared state and achieve eventual consistency without a central coordinator, while handling partial network failures, packet loss, crash faults (fail-stop), and concurrent updates via Last-Write-Wins (LWW) conflict resolution.
 
 ---
 
@@ -30,17 +30,17 @@ The project demonstrates how a group of independent nodes can maintain a shared 
 
 ## Overview
 
-This project simulates a distributed database involving independent peer-to-peer nodes organized in a predefined topology[cite: 2]. 
+This project simulates a distributed database involving independent peer-to-peer nodes organized in a predefined topology. 
 
 Instead of relying on a centralized coordinator, the system uses an epidemic gossip protocol. A client can inject a new Key-Value pair into any arbitrary node in the network. Through periodic communication rounds, nodes exchange information and converge to a globally consistent state.
 
-The system is intentionally designed as a didactic project. Its primary objective is to demonstrate the semantics and failure handling of a distributed P2P architecture rather than provide a production-ready database[cite: 2].
+The system is intentionally designed as a didactic project. Its primary objective is to demonstrate the semantics and failure handling of a distributed P2P architecture rather than provide a production-ready database.
 
 ---
 
 ## Goals
 
-The project demonstrates the following distributed systems concepts[cite: 2]:
+The project demonstrates the following distributed systems concepts:
 
 - independent peer-to-peer nodes;
 - asynchronous communication using ZeroMQ (REQ/REP);
@@ -49,7 +49,7 @@ The project demonstrates the following distributed systems concepts[cite: 2]:
 - crash fault tolerance (fail-stop scenarios);
 - thread-safe state management;
 - Last-Write-Wins (LWW) conflict resolution via logical timestamps;
-- separation between background daemon threads and execution loops[cite: 2].
+- separation between background daemon threads and execution loops.
 
 ---
 
