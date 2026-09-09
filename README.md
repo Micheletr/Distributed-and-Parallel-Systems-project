@@ -143,7 +143,7 @@ If a healthy node attempts to push/pull from a dead node, the socket relies on `
 ```text
 Distributed-AntiEntropy-Protocol/
 │
-├── antientropy_mio.py
+├── antientropy.py
 └── README.md
 
 ```
@@ -196,7 +196,7 @@ The main environment constants at the top of the script are:
 To run the complete 3x3 grid automatically in a single terminal:
 
 ```bash
-python antientropy_mio.py --demo
+python antientropy.py --demo
 
 ```
 
@@ -207,9 +207,9 @@ This spawns 9 subprocesses. Node 4 (the center node) is initialized with a seed 
 To start nodes individually (e.g., in `tmux` or multiple terminal windows):
 
 ```bash
-python antientropy_mio.py --id 0
-python antientropy_mio.py --id 1
-python antientropy_mio.py --id 4 --seed-value "initial_state"
+python antientropy.py --id 0
+python antientropy.py --id 1
+python antientropy.py --id 4 --seed-value "initial_state"
 
 ```
 
@@ -224,7 +224,7 @@ The script acts as a client API to interact with the running network.
 To insert a new key-value pair into a specific node (e.g., Node 0):
 
 ```bash
-python antientropy_mio.py --put 0 new_key new_value
+python antientropy.py --put 0 new_key new_value
 
 ```
 
@@ -233,7 +233,7 @@ python antientropy_mio.py --put 0 new_key new_value
 To force a hard crash on a specific node (e.g., Node 4) bypassing exception handling:
 
 ```bash
-python antientropy_mio.py --kill 4
+python antientropy.py --kill 4
 
 ```
 
@@ -246,7 +246,7 @@ python antientropy_mio.py --kill 4
 Start the network:
 
 ```bash
-python antientropy_mio.py --demo
+python antientropy.py --demo
 
 ```
 
@@ -257,7 +257,7 @@ python antientropy_mio.py --demo
 In a second terminal, execute:
 
 ```bash
-python antientropy_mio.py --put 0 order_id 9942
+python antientropy.py --put 0 order_id 9942
 
 ```
 
